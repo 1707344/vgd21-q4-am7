@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float health;
-    public SpriteRenderer sprite;
-
+    SpriteRenderer sprite;
     public void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
