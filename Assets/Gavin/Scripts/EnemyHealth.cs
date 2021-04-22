@@ -13,10 +13,6 @@ public class EnemyHealth : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Hit(2);
-        }
     }
 
     public void Hit(float damage)
@@ -27,17 +23,20 @@ public class EnemyHealth : MonoBehaviour
             Die();
             return;
         }
-
-
+        print("HIT");
+        StartCoroutine("Flash");
     }
 
-    public void Flash()
+    public IEnumerator Flash()
     {
-        
+        sprite.color = new Color(sprite.color.r*2, sprite.color.g/2, sprite.color.b/2, 1f);
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = new Color(sprite.color.r/2, sprite.color.g*2, sprite.color.b*2, 1f);
+        yield return new WaitForSeconds(0.1f);
     }
 
     public void Die()
     {
-
+        Destroy(gameObject);
     }
 }

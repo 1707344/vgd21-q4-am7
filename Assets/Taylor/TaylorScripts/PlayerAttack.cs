@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("Player attacked enemy");
+            collision.GetComponent<EnemyHealth>().Hit(1);
         }
     }
 }
