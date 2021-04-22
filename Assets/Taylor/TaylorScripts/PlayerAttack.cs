@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private Transform enemy;
-    private float dist;
-    public float howclose;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemy = GameObject.FindWithTag("Enemy").transform;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        dist = Vector3.Distance(enemy.position, transform.position);
-
-        if (Input.GetKeyDown("k") && dist <= howclose)
+        if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Player attacked enemy");
         }

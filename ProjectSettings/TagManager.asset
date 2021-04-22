@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Feet
   - Enemy
+  - Hand
   layers:
   - Default
   - TransparentFX
