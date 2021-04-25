@@ -6,9 +6,13 @@ public class EnemyHealth : MonoBehaviour
 {
     public float health;
     SpriteRenderer sprite;
+    ParticleSystem particleSystem;
     public void Start()
     {
+        particleSystem = transform.GetChild(0).GetComponent<ParticleSystem>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+
+        
     }
     public void Update()
     {
@@ -16,6 +20,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Hit(float damage)
     {
+        particleSystem.Play();
         health -= damage;
         if(health <= 0)
         {
