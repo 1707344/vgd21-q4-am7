@@ -26,9 +26,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(rb.velocity.x > 0)
         {
+            particleSystem.transform.localScale = new Vector3(1, 1, 1);
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }else if(rb.velocity.x < 0)
         {
+            particleSystem.transform.localScale = new Vector3(-1, 1, 1);
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y, transform.localScale.z);
         }
 
