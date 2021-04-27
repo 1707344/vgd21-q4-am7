@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4906267593206954810}
   - component: {fileID: 4906267593206954808}
   - component: {fileID: 4906267593206954811}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 4906267593280088318}
   - component: {fileID: 2675882236832785460}
   - component: {fileID: 2252954537171636377}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4880,6 +4880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  canTakeDamage: 1
 --- !u!58 &2675882236832785460
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4890,7 +4891,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.45}
@@ -4927,7 +4928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652188154553976010}
   - component: {fileID: 2838900625672331636}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: EnemyBumper
   m_TagString: Feet
   m_Icon: {fileID: 0}
