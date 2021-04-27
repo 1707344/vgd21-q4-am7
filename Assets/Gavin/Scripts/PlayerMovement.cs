@@ -8,16 +8,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 speed;
 
     public bool isAttacking;
-    bool canAttack = true;
-    GameObject playerHand;
     SpriteRenderer sprite;
+    ParticleSystem particleSystem;
 
     // Start is called before the first frame update
     void Start()
     {
+        particleSystem = transform.GetChild(1).GetComponent<ParticleSystem>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
         rb = gameObject.GetComponent<Rigidbody2D>();
-        playerHand = transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
@@ -33,29 +32,10 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y, transform.localScale.z);
         }
 
-        isAttacking = (Input.GetKeyDown(KeyCode.K) && canAttack) || isAttacking;
-
-
-        if (isAttacking)
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            playerHand.transform.position = Vector2.Lerp(playerHand.transform.position, transform.GetChild(3).position, 0.1f);
-            canAttack = false;
-            Invoke("TurnAttackOff", 0.1f);
-        }
-        else
-        {
-            playerHand.transform.position = Vector2.Lerp(playerHand.transform.position, transform.GetChild(2).position, 0.1f);
-            Invoke("TurnCanAttackOn", 0.15f);
+            particleSystem.Play();
         }
     }
 
-    void TurnAttackOff()
-    {
-        isAttacking = false;
-    }
-
-    void TurnCanAttackOn()
-    {
-        canAttack = true;
-    }
 }
