@@ -13,8 +13,11 @@ public class EnemyAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
-            canAttack = 0f;
+            if (attackSpeed <= canAttack)
+            {
+                other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                canAttack = 0f;
+            }
         }
         else
         {
