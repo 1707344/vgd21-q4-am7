@@ -18,7 +18,6 @@ public class FireBallScript : MonoBehaviour
         
     }
 
-
     void OnParticleCollision(GameObject other)
     {
 
