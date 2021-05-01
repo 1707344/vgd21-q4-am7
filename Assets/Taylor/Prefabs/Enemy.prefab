@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3269318983292003078}
   - component: {fileID: 3269318983292003076}
   - component: {fileID: 3269318983292003079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 8506312461793331365}
   - component: {fileID: 3269318983365144770}
   - component: {fileID: 615897986024470893}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -4784,7 +4784,7 @@ Transform:
   m_GameObject: {fileID: 3269318983365144774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5, y: -2.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 2, z: 1}
   m_Children:
   - {fileID: 3269318983292003078}
   - {fileID: 8553492478540308147}
@@ -4876,7 +4876,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3269318983365144774}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ebe636a4402eb47b352b0b6088ffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7169966731660803285, guid: 1a1d97d883665854ea45d174a12ad9a3, type: 3}
+  player: {fileID: 0}
   moveSpeed: 5
 --- !u!1 &7653015464557362129
 GameObject:
