@@ -2,32 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class TestingScript : MonoBehaviour
 {
+    public float health;
     SpriteRenderer sprite;
-    private float health = 0f;
-    [SerializeField] private float maxHealth = 100f;
 
     public bool canTakeDamage = true;
-
-    private void Start()
+    public void Start()
     {
-        health = maxHealth;
         sprite = gameObject.GetComponent<SpriteRenderer>();
+
+
     }
-
-    public void UpdateHealth(float mod)
+    public void Update()
     {
-        health += mod;
-
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        } else if(health <= 0f)
-        {
-            health = 0f;
-            Debug.Log("Player Respawn");
-        }
     }
 
     public void Hit(float damage)

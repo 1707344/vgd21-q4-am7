@@ -564,6 +564,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 517886692}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &340957810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340957809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3770b272cfb6e9d44b3fe095637debb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  attackSpeed: 1
 --- !u!4 &340957817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9081856427130048821, guid: 46bb8a32082e6dc45a48c73c5127c55e,
@@ -5514,6 +5528,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9081856427130048820, guid: 46bb8a32082e6dc45a48c73c5127c55e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081856427130048820, guid: 46bb8a32082e6dc45a48c73c5127c55e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9081856427130048821, guid: 46bb8a32082e6dc45a48c73c5127c55e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6255,6 +6279,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.256802, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &924013860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7169966731660803272, guid: 1a1d97d883665854ea45d174a12ad9a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 792418040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &924013861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924013860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48b3b89b04ab4248bb90cc04ca736a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  canTakeDamage: 1
 --- !u!1 &1075541027
 GameObject:
   m_ObjectHideFlags: 0
