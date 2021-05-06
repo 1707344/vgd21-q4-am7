@@ -34,9 +34,6 @@ public class PlayerMovement : MonoBehaviour
         
         particleSystem.transform.rotation = Quaternion.Euler(0, 0, angle);
 
-
-        print(angle);
-
         if (rb.velocity.x > 0)
         {
             //particleSystem.transform.localScale = new Vector3(1, 1, 1);
