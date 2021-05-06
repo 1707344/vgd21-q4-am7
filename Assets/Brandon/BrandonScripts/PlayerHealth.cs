@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     SpriteRenderer sprite;
-    private float health = 0f;
+    public float health = 0f;
     [SerializeField] private float maxHealth = 100f;
 
     public bool canTakeDamage = true;
@@ -19,8 +19,12 @@ public class PlayerHealth : MonoBehaviour
     public void UpdateHealth(float mod)
     {
         health += mod;
+        if (mod < 0)
+        {
+            Hit(mod);
+        }
 
-        if(health > maxHealth)
+        if (health > maxHealth)
         {
             health = maxHealth;
         } else if(health <= 0f)
@@ -38,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
             Die();
             return;
         }
-        print("HIT");
+        print("*******************************HIT");
         canTakeDamage = false;
         StartCoroutine("Flash");
     }
@@ -56,6 +60,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
