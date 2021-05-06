@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 4216629064741911112}
   - component: {fileID: 8567290861564846782}
   m_Layer: 11
-  m_Name: Background Particles
+  m_Name: Spawning Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
