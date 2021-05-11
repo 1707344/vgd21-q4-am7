@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class NextStage : MonoBehaviour
 {
-    public GameObject arrow;
+    public static int killCount = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject proceedUI;
+    public GameObject rightWall;
+    public GameObject spawner;
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+
+        if (killCount >= 5)
         {
-            arrow.SetActive(true);
+            Debug.Log(killCount);
+
             Next();
         }
     }
 
     public void Next()
     {
-        Destroy(gameObject);
+        proceedUI.SetActive(true);
+        Destroy(rightWall);
+        Destroy(spawner);
     }
 }
