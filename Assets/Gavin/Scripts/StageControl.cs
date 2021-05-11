@@ -28,6 +28,19 @@ public class StageControl : MonoBehaviour
             if (Mathf.Abs(player.position.x - marker.position.x) <= distance)
             {
                 cameraTransform.position = new Vector3(marker.position.x, marker.position.y, cameraTransform.position.z);
+
+                float right = marker.position.x - (marker.localScale.x / 2f) + 1;
+                float left = marker.position.x + (marker.localScale.x / 2f) - 1;
+
+
+                if (player.position.x > left)
+                {
+                    player.position = new Vector3(left, player.position.y, player.position.z);
+                }
+                else if (player.position.x < right)
+                {
+                    player.position = new Vector3(right, player.position.y, player.position.z);
+                }
             }
         }
     }
