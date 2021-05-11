@@ -47,6 +47,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        NextStage.killCount += 1;
+        Debug.Log("Kills: " + NextStage.killCount);
         Destroy(gameObject);
     }
 }

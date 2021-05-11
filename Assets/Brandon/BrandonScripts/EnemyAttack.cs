@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private float attackDamage = 10f;
-    [SerializeField] private float attackSpeed = 1f;
+    [SerializeField] private float attackSpeed = 0.5f;
     private float canAttack;
 
 
@@ -19,7 +19,6 @@ public class EnemyAttack : MonoBehaviour
         
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("======================" + other.gameObject.name);
             if (attackSpeed <= canAttack)
             {
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
