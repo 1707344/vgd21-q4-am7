@@ -29,7 +29,6 @@ public class EnemyHealth : MonoBehaviour
             Die();
             return;
         }
-        print("HIT");
         canTakeDamage = false;
         StartCoroutine("Flash");
     }

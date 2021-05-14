@@ -9,24 +9,29 @@ public class NextStage : MonoBehaviour
     public GameObject proceedUI;
     public GameObject rightWall;
     public GameObject spawner;
+    public GameObject gameMaster;
 
 
     // Update is called once per frame
     void Update()
     {
 
-        if (killCount >= 5)
+        if (killCount >= 3)
         {
-            Debug.Log(killCount);
-
             Next();
         }
+    }
+
+    public void Reset()
+    {
+        killCount = 0;
+        proceedUI.SetActive(false);
+        gameMaster.GetComponent<StageControl>().canContinue = false;
     }
 
     public void Next()
     {
         proceedUI.SetActive(true);
-        Destroy(rightWall);
-        Destroy(spawner);
+        gameMaster.GetComponent<StageControl>().canContinue = true;
     }
 }
