@@ -7,8 +7,10 @@ public class NextStage : MonoBehaviour
     public static int killCount = 0;
 
     public GameObject proceedUI;
-    public GameObject rightWall;
-    public GameObject spawner;
+    public GameObject spawner1;
+    public GameObject spawner2;
+    public GameObject spawner3;
+    public GameObject spawner4;
     public GameObject gameMaster;
 
 
@@ -16,10 +18,11 @@ public class NextStage : MonoBehaviour
     void Update()
     {
 
-        if (killCount >= 3)
+        if (killCount >= 5)
         {
-            Next();
+            Next1();
         }
+
     }
 
     public void Reset()
@@ -29,8 +32,17 @@ public class NextStage : MonoBehaviour
         gameMaster.GetComponent<StageControl>().canContinue = false;
     }
 
-    public void Next()
+    public void Next1()
     {
+        Destroy(spawner1);
+        proceedUI.SetActive(true);
+        spawner2.SetActive(true);
+        gameMaster.GetComponent<StageControl>().canContinue = true;
+    }
+
+    public void Next2()
+    {
+        Destroy(spawner2);
         proceedUI.SetActive(true);
         gameMaster.GetComponent<StageControl>().canContinue = true;
     }
