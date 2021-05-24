@@ -24,6 +24,7 @@ public class EnemyAttack : MonoBehaviour
             {
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
                 canAttack = 0f;
+                
             }
             else
             {
