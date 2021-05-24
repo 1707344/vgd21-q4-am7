@@ -18,16 +18,28 @@ public class EnemyControls : MonoBehaviour
     //Update is called once per frame
     private void Update()
     {
-        Vector3 direction = player.position - transform.position;
-        direction.Normalize();
-        movement = direction;
-        moveCharacter(movement);
-        followPlayer();
+        if(transform.position.y < -2.5)
+        {
+            moveCharacter(Vector2.up);
+        }
+        else
+        {
+            Vector2 direction = player.position - transform.position;
+            direction.Normalize();
+            movement = direction;
+            movement.y = 0;
+            //print(movement);
+            moveCharacter(movement);
+            followPlayer();
+        }
+        
     }
 
     void moveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        
+        //transform.position = new Vector3(transform.position.x + direction.x * moveSpeed * Time.deltaTime, transform.position.y, transform.position.z);
     }
 
     void followPlayer()

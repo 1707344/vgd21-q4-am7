@@ -9,6 +9,7 @@ public class EnemySpawn : MonoBehaviour
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
+    public bool canSpawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,13 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextSpawn)
+        if (Time.time > nextSpawn && canSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(-6.0f, 6.0f);
-            whereToSpawn = new Vector2(transform.position.x, transform.position.y);
+            randX = Random.Range(1, 100) > 50 ? 6 : -6;
+            whereToSpawn = new Vector2(transform.position.x + randX, transform.position.y);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            
         }
     }
 }

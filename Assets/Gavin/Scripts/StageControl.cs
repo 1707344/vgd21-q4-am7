@@ -43,15 +43,15 @@ public class StageControl : MonoBehaviour
                     {
                         if(inMarker != i)
                         {
-                            nextStage.Reset();
+                            nextStage.Reset(markers[i].position.x);
                         }
                         inMarker = i;
                         break;
                     }
                 }
 
-                float right = marker.position.x - (marker.localScale.x / 2f) + 1;
-                float left = marker.position.x + (marker.localScale.x / 2f) - 1;
+                float right = marker.position.x - (marker.localScale.x / 2f) + 0.2f;
+                float left = marker.position.x + (marker.localScale.x / 2f) - 0.2f;
 
 
                 if (player.position.x > left && !canContinue)

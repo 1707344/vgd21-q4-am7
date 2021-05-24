@@ -30,7 +30,7 @@ public class FireBallScript : MonoBehaviour
 
         if (collider.CompareTag("Enemy"))
         {
-            collider.GetComponent<EnemyHealth>().Hit(1);
+            collider.GetComponent<EnemyHealth>().Hit(1, transform.parent.position);
         }
     }
 }
