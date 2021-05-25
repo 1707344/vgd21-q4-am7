@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageControl : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class StageControl : MonoBehaviour
                 {
                     if(markers[i] == marker)
                     {
+                        if(markers[i].tag == "Final Marker")
+                        {
+                            SceneManager.LoadScene("EndScreen");
+                        }
                         if(inMarker != i)
                         {
                             nextStage.Reset(markers[i].position.x);
