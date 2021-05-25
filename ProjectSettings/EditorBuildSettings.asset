@@ -12,6 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/GavinTestScene.unity
     guid: 2c3f7c6aa4e71644cb76524eb6d5e182
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Gavin/EndScreen.unity
     guid: 5983c38481d6737419ef0dc72ef6eb7f
+=======
+    path: Assets/Scenes/DeathScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+>>>>>>> e679b05e019c0b52326c1d2be643aa40d1fb81da
   m_configObjects: {}
