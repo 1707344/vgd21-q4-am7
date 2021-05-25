@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     SpriteRenderer sprite;
     public float health = 0f;
     [SerializeField] private float maxHealth = 100f;
+    public bool isAlive = true;
 
     public bool canTakeDamage = true;
 
@@ -60,8 +62,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-
+        isAlive = false;
         //Destroy(gameObject);
+        Debug.Log("We've died!");
+        SceneManager.LoadScene("DeathScene");
         gameObject.SetActive(false);
     }
 }
