@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Hand
   - Fire
+  - Final Marker
   layers:
   - Default
   - TransparentFX

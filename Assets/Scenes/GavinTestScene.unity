@@ -5982,7 +5982,7 @@ GameObject:
   - component: {fileID: 531266696}
   m_Layer: 0
   m_Name: Marker (5)
-  m_TagString: Untagged
+  m_TagString: Final Marker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7143,6 +7143,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4097496101815040587, guid: 15884d527c3514dcbab93445dc54557e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 76753756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15884d527c3514dcbab93445dc54557e, type: 3}
 --- !u!1 &1026748015
@@ -8340,7 +8345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1890982358
 Transform:
   m_ObjectHideFlags: 0
