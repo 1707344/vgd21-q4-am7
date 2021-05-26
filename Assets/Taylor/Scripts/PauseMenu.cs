@@ -21,6 +21,11 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene("CreditScene");
+        }
     }
 
     void Pause()
